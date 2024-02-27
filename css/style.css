@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    background: #e3f2fd;
+}
+
+.wrapper {
+    width: 65vmin;
+    height: 70vmin;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #293447;
+    border-radius: 4px;
+}
+
+.game-detials {
+    color: #b8c6dc;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.play-board {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    background: #212837;
+}
+
+.play-board .food {
+    background: #ff003d;
+}
+
+.play-board .head {
+    background: #60cbff;
+}
+
+.controls {
+    display: grid;
+    grid-template-areas: 
+    ". up ."
+    "left . right"
+    ". down .";
+}
+
+.arrow {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.arrow.left {
+    grid-area: left;
+}
+.arrow.left img {
+    transform: rotateY(180deg);
+}
+.arrow.right {
+    grid-area: right;
+}
+.arrow.up {
+    grid-area: up;
+}
+.arrow.up img {
+    transform: rotate(-90deg);
+}
+.arrow.down {
+    grid-area: down;
+}
+.arrow.down img {
+    transform: rotate(90deg);
+}
+
+@media (max-width: 1024px) {
+    .arrow {
+        display: block;
+    }
+}
