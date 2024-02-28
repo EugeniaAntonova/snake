@@ -8,18 +8,20 @@
     font-family: 'Open Sans', sans-serif;
 }
 body {
+    --width: min(100vw, 560px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     min-height: 100vh;
     min-height: 100svh;
     background: #e3f2fd;
 }
 
 .wrapper {
-    width: 65vmin;
-    height: 70vmin;
+    /* width: 65vmin; */
+
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
@@ -38,8 +40,8 @@ body {
 }
 
 .play-board {
-    width: 100%;
-    height: 100%;
+    width: var(--width);
+    height: var(--width);
     display: grid;
     grid-template: repeat(30, 1fr) / repeat(30, 1fr);
     background: #212837;
